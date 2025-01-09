@@ -1,5 +1,5 @@
 # OpenAPI-Spec-to-Excel
-Tool to extract details from OpenAPI spec and save them in an Excel file.
+Tool to extract methods, endpoints and descriptions from an OpenAPI Specification and save them in an Excel file.
 ## Usage
 ```
 python3 api_schema_to_excel.py SPEC_FILE_NAME
