@@ -4,15 +4,15 @@ import sys
 import yaml
 
 def convertYAML(ymlswaggerfile):
-    with open(ymlswaggerfile, 'r') as yaml_in:
+    with open(ymlswaggerfile, 'r', encoding='utf-8') as yaml_in:
         yaml_object = yaml.safe_load(yaml_in)
-        jsonswaggerfile=json.dumps(yaml_object)
+        jsonswaggerfile=json.dumps(yaml_object, default=str)
         jsonswaggerfile=json.loads(jsonswaggerfile)
     return jsonswaggerfile
 
 def readFile(jsonswaggerfile):
     if isinstance(jsonswaggerfile,str):
-        with open(jsonswaggerfile,'r') as f:
+        with open(jsonswaggerfile,'r',  encoding='utf-8') as f:
             jsonswaggerfile=json.load(f)
             
     endpoints = []
